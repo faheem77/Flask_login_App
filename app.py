@@ -30,7 +30,7 @@ def before_request():
 		g.user = user
 	        
 	
-
+app.route('/')
 @app.route('/login', methods=['GET', 'POST'])
 def login():
 	if request.method == 'POST':
