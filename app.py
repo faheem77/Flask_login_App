@@ -41,8 +41,7 @@ def login():
 		if user and user.password == password:
 			session['user_id'] = user.id
 			return redirect(url_for('profile'))
-		else:
-			return redirect(url_for('login'))
+		return redirect(url_for('login'))
 	else:
 		return render_template('login.html')
 	
